@@ -1,21 +1,18 @@
-﻿using TEngine.Localization;
-using UnityEngine.Device;
-
+﻿
 namespace GameConfig.l10n
 {
     public sealed partial class textinfo : Luban.BeanBase
     {
         public string GetText()
         {
-            switch (Application.systemLanguage)
+            switch (TEngine.GameModule.Localization.Language)
             {
-                case UnityEngine.SystemLanguage.English:
+                case TEngine.Language.English:
                     return En;
-                case UnityEngine.SystemLanguage.Chinese:
-                case UnityEngine.SystemLanguage.ChineseSimplified:
-                case UnityEngine.SystemLanguage.ChineseTraditional:
+                case TEngine.Language.ChineseSimplified:
+                case TEngine.Language.ChineseTraditional:
                     return Zh;
-                case UnityEngine.SystemLanguage.Japanese:
+                case TEngine.Language.Japanese:
                     return Jp;
                 default:
                     return En;

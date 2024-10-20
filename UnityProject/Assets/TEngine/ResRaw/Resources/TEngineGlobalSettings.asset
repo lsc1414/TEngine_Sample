@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TEngineGlobalSettings
   m_EditorClassIdentifier: 
   m_FrameworkGlobalSettings:
-    m_ScriptAuthor: Default
+    m_ScriptAuthor: LSC
     m_ScriptVersion: 0.1
     mAppStageEnum: 1
     m_DefaultFont: Arial
@@ -79,7 +79,6 @@ MonoBehaviour:
     - uiElementRegex: m_canvasGroup
       componentName: CanvasGroup
   m_HybridCLRCustomGlobalSettings:
-    m_Enable: 1
     HotUpdateAssemblies:
     - GameBase.dll
     - GameProto.dll
