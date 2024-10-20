@@ -13,24 +13,82 @@ namespace GameConfig
 {
 public partial class Tables
 {
-    public item.TbItem TbItem {get; }
-    public Tbitem2 Tbitem2 {get; }
-    public l10n.Tbtextinfo Tbtextinfo {get; }
+    #region The Tables
+
+    private item.TbItem m_TbItem;
+    public item.TbItem TbItem 
+    {
+        get
+        {
+            if (m_TbItem == null)
+            {
+                m_TbItem = new item.TbItem(defaultLoader("item_tbitem"));
+                m_TbItem.ResolveRef(this);
+            }
+            return m_TbItem;
+        }
+        set
+        {
+            m_TbItem = value;
+            m_TbItem.ResolveRef(this);
+        }
+    }
+    private Tbitem2 m_Tbitem2;
+    public Tbitem2 Tbitem2 
+    {
+        get
+        {
+            if (m_Tbitem2 == null)
+            {
+                m_Tbitem2 = new Tbitem2(defaultLoader("tbitem2"));
+                m_Tbitem2.ResolveRef(this);
+            }
+            return m_Tbitem2;
+        }
+        set
+        {
+            m_Tbitem2 = value;
+            m_Tbitem2.ResolveRef(this);
+        }
+    }
+    private l10n.Tbtextinfo m_Tbtextinfo;
+    public l10n.Tbtextinfo Tbtextinfo 
+    {
+        get
+        {
+            if (m_Tbtextinfo == null)
+            {
+                m_Tbtextinfo = new l10n.Tbtextinfo(defaultLoader("l10n_tbtextinfo"));
+                m_Tbtextinfo.ResolveRef(this);
+            }
+            return m_Tbtextinfo;
+        }
+        set
+        {
+            m_Tbtextinfo = value;
+            m_Tbtextinfo.ResolveRef(this);
+        }
+    }
+
+    #endregion
+
+    System.Func<string, ByteBuf> defaultLoader;
 
     public Tables(System.Func<string, ByteBuf> loader)
     {
-        TbItem = new item.TbItem(loader("item_tbitem"));
-        Tbitem2 = new Tbitem2(loader("tbitem2"));
-        Tbtextinfo = new l10n.Tbtextinfo(loader("l10n_tbtextinfo"));
-        ResolveRef();
+        SetDefaultLoader(loader);
+        Init();
     }
     
-    private void ResolveRef()
+    public void SetDefaultLoader(System.Func<string, ByteBuf> loader)
     {
-        TbItem.ResolveRef(this);
-        Tbitem2.ResolveRef(this);
-        Tbtextinfo.ResolveRef(this);
+        defaultLoader = null;
+        defaultLoader = loader;
     }
+
+    //public partial void Init();
+
+    public void Init(){}
 }
 
 }
