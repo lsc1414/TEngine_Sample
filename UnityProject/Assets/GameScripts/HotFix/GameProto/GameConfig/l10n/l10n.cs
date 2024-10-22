@@ -1,7 +1,7 @@
 ﻿
 namespace GameConfig.l10n
 {
-    public sealed partial class textinfo : Luban.BeanBase
+    public sealed partial class localization : Luban.BeanBase
     {
         public string GetText()
         {

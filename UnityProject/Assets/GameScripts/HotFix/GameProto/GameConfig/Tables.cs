@@ -33,40 +33,22 @@ public partial class Tables
             m_TbItem.ResolveRef(this);
         }
     }
-    private Tbitem2 m_Tbitem2;
-    public Tbitem2 Tbitem2 
+    private l10n.Tblocalization m_Tblocalization;
+    public l10n.Tblocalization Tblocalization 
     {
         get
         {
-            if (m_Tbitem2 == null)
+            if (m_Tblocalization == null)
             {
-                m_Tbitem2 = new Tbitem2(defaultLoader("tbitem2"));
-                m_Tbitem2.ResolveRef(this);
+                m_Tblocalization = new l10n.Tblocalization(defaultLoader("l10n_tblocalization"));
+                m_Tblocalization.ResolveRef(this);
             }
-            return m_Tbitem2;
+            return m_Tblocalization;
         }
         set
         {
-            m_Tbitem2 = value;
-            m_Tbitem2.ResolveRef(this);
-        }
-    }
-    private l10n.Tbtextinfo m_Tbtextinfo;
-    public l10n.Tbtextinfo Tbtextinfo 
-    {
-        get
-        {
-            if (m_Tbtextinfo == null)
-            {
-                m_Tbtextinfo = new l10n.Tbtextinfo(defaultLoader("l10n_tbtextinfo"));
-                m_Tbtextinfo.ResolveRef(this);
-            }
-            return m_Tbtextinfo;
-        }
-        set
-        {
-            m_Tbtextinfo = value;
-            m_Tbtextinfo.ResolveRef(this);
+            m_Tblocalization = value;
+            m_Tblocalization.ResolveRef(this);
         }
     }
 

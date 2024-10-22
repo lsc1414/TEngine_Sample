@@ -78,9 +78,9 @@ namespace TEngine
         {
             RegisterLanguageMap(Language.English);
             RegisterLanguageMap(Language.ChineseSimplified, "Chinese");
-            RegisterLanguageMap(Language.ChineseTraditional);
-            RegisterLanguageMap(Language.Japanese);
-            RegisterLanguageMap(Language.Korean);
+            // RegisterLanguageMap(Language.ChineseTraditional);
+            // RegisterLanguageMap(Language.Japanese);
+            // RegisterLanguageMap(Language.Korean);
         }
 
         private static void RegisterLanguageMap(Language language, string str = "")

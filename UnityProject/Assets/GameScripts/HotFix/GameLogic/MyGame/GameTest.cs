@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TEngine;
 using UnityEngine;
 
 namespace GameLogic
@@ -9,7 +10,7 @@ namespace GameLogic
         // Start is called before the first frame update
         void Start()
         {
-            var item = ConfigSystem.Instance.Tables.TbItem.Get(0);
+            var item = ConfigSystem.Instance.Tables.TbItem.Get(10000);
             Debug.Log(item.Id+item.Name+item.Desc);
                 //Debug.Log(ConfigSystem.Instance.Tables.TbtextInfo.Get("Hair").En);
         }
@@ -17,7 +18,7 @@ namespace GameLogic
         // Update is called once per frame
         void Update()
         {
-        
+            transform.eulerAngles+=Vector3.forward*(Time.deltaTime*50);
         }
     }
 }

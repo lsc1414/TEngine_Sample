@@ -711,9 +711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706e6317a59f61044b2805be79f6b284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InnerLocalizationCSV: {fileID: 0}
-  m_AllLanguage: []
-  m_UseRuntimeModule: 1
 --- !u!1 &964133196
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +822,7 @@ MonoBehaviour:
   m_MaxUnloadUnusedAssetsInterval: 300
   m_UseSystemUnloadUnusedAssets: 1
   packageName: DefaultPackage
-  playMode: 1
+  playMode: 2
   m_UpdatableWhilePlaying: 0
   VerifyLevel: 1
   m_ReadWritePathType: 0
