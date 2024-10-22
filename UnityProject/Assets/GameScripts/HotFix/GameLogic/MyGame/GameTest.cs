@@ -11,14 +11,16 @@ namespace GameLogic
         void Start()
         {
             var item = ConfigSystem.Instance.Tables.TbItem.Get(10000);
-            Debug.Log(item.Id+item.Name+item.Desc);
+            Log.Debug(item.Id+item.Name+item.Desc);
                 //Debug.Log(ConfigSystem.Instance.Tables.TbtextInfo.Get("Hair").En);
+                
+            GameModule.UI.ShowUI<VersionGO>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            transform.eulerAngles+=Vector3.forward*(Time.deltaTime*50);
+            transform.eulerAngles+=Vector3.left*(Time.deltaTime*100);
         }
     }
 }
