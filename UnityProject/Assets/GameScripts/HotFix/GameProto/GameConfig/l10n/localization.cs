@@ -12,9 +12,9 @@ using Luban;
 
 namespace GameConfig.l10n
 {
-public sealed partial class localization : Luban.BeanBase
+public sealed partial class Localization : Luban.BeanBase
 {
-    public localization(ByteBuf _buf) 
+    public Localization(ByteBuf _buf) 
     {
         Key = _buf.ReadString();
         En = _buf.ReadString();
@@ -22,9 +22,9 @@ public sealed partial class localization : Luban.BeanBase
         Jp = _buf.ReadString();
     }
 
-    public static localization Deserializelocalization(ByteBuf _buf)
+    public static Localization DeserializeLocalization(ByteBuf _buf)
     {
-        return new l10n.localization(_buf);
+        return new l10n.Localization(_buf);
     }
 
     /// <summary>
@@ -44,7 +44,7 @@ public sealed partial class localization : Luban.BeanBase
     /// </summary>
     public readonly string Jp;
    
-    public const int __ID__ = -970284956;
+    public const int __ID__ = -805964668;
     public override int GetTypeId() => __ID__;
 
     public  void ResolveRef(Tables tables)

@@ -12,31 +12,31 @@ using Luban;
 
 namespace GameConfig.l10n
 {
-public partial class Tblocalization
+public partial class TbLocalization
 {
-    private readonly System.Collections.Generic.Dictionary<string, l10n.localization> _dataMap;
-    private readonly System.Collections.Generic.List<l10n.localization> _dataList;
+    private readonly System.Collections.Generic.Dictionary<string, l10n.Localization> _dataMap;
+    private readonly System.Collections.Generic.List<l10n.Localization> _dataList;
     
-    public Tblocalization(ByteBuf _buf)
+    public TbLocalization(ByteBuf _buf)
     {
-        _dataMap = new System.Collections.Generic.Dictionary<string, l10n.localization>();
-        _dataList = new System.Collections.Generic.List<l10n.localization>();
+        _dataMap = new System.Collections.Generic.Dictionary<string, l10n.Localization>();
+        _dataList = new System.Collections.Generic.List<l10n.Localization>();
         
         for(int n = _buf.ReadSize() ; n > 0 ; --n)
         {
-            l10n.localization _v;
-            _v = l10n.localization.Deserializelocalization(_buf);
+            l10n.Localization _v;
+            _v = l10n.Localization.DeserializeLocalization(_buf);
             _dataList.Add(_v);
             _dataMap.Add(_v.Key, _v);
         }
     }
 
-    public System.Collections.Generic.Dictionary<string, l10n.localization> DataMap => _dataMap;
-    public System.Collections.Generic.List<l10n.localization> DataList => _dataList;
+    public System.Collections.Generic.Dictionary<string, l10n.Localization> DataMap => _dataMap;
+    public System.Collections.Generic.List<l10n.Localization> DataList => _dataList;
 
-    public l10n.localization GetOrDefault(string key) => _dataMap.TryGetValue(key, out var v) ? v : null;
-    public l10n.localization Get(string key) => _dataMap[key];
-    public l10n.localization this[string key] => _dataMap[key];
+    public l10n.Localization GetOrDefault(string key) => _dataMap.TryGetValue(key, out var v) ? v : null;
+    public l10n.Localization Get(string key) => _dataMap[key];
+    public l10n.Localization this[string key] => _dataMap[key];
 
     public void ResolveRef(Tables tables)
     {

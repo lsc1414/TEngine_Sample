@@ -42,7 +42,7 @@ public partial class GameApp:Singleton<GameApp>
         var item = ConfigSystem.Instance.Tables.TbItem[10000];
             Log.Info(item.Id+item.Name+item.Desc);
             //GameModule.Get<LocalizationModule>().Language = Language.ChineseSimplified;
-            Log.Info(ConfigSystem.Instance.Tables.Tblocalization.Get("apple").GetText());
+            Log.Info(ConfigSystem.Instance.Tables.TbLocalization.Get("apple").GetText());
             //Log.Info(ConfigSystem.Instance.Tables.Tbitem2[10000].Name_Ref.Jp);
             //ConfigSystem.Instance.Tables.Tbitem2[10000].Name_Ref.ResolveRef(ConfigSystem.Instance.Tables);
             GameModule.Scene.LoadScene("Game");

@@ -8,7 +8,7 @@ namespace TEngine
     [InitializeOnLoad]
     public class SceneSwitchLeftButton
     {
-        private static readonly string SceneMain = "main";
+        private static readonly string SceneMain = "GameLauncher";
 
         static SceneSwitchLeftButton()
         {

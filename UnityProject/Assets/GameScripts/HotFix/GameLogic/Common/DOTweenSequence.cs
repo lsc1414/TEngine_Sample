@@ -35,12 +35,18 @@ namespace GameLogic.Common
             m_Sequence = serializedObject.FindProperty("m_Sequence");
             m_SequenceList = new ReorderableList(serializedObject, m_Sequence);
             m_SequenceList.drawElementCallback = OnDrawSequenceItem;
+            m_SequenceList.drawHeaderCallback = OnDrawSequenceHeader;
             m_SequenceList.elementHeightCallback = index =>
             {
                 var item = m_Sequence.GetArrayElementAtIndex(index);
                 return EditorGUI.GetPropertyHeight(item);
             };
-            m_SequenceList.drawHeaderCallback = OnDrawSequenceHeader;
+        }
+
+        private void OnDisable()
+        {
+            DOTweenEditorPreview.Stop(true, true);
+            (target as DOTweenSequence).DOKill();
         }
 
         public override void OnInspectorGUI()
@@ -140,6 +146,7 @@ namespace GameLogic.Common
             var onPlay = property.FindPropertyRelative("OnPlay");
             var onUpdate = property.FindPropertyRelative("OnUpdate");
             var onComplete = property.FindPropertyRelative("OnComplete");
+
 
             var lastRect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
             EditorGUI.PropertyField(lastRect, addType);
@@ -590,6 +597,7 @@ namespace GameLogic.Common
     {
         [HideInInspector] [SerializeField] SequenceAnimation[] m_Sequence;
         [SerializeField] bool m_PlayOnAwake = false;
+        [SerializeField] bool m_PlayOnEnable = false;
         [SerializeField] float m_Delay = 0;
         [SerializeField] Ease m_Ease = Ease.OutQuad;
         [SerializeField] int m_Loops = 1;
@@ -607,6 +615,11 @@ namespace GameLogic.Common
         {
             InitTween();
             if (m_PlayOnAwake) DOPlay();
+        }
+
+        private void OnEnable()
+        {
+            if (m_PlayOnEnable) DOPlay();
         }
 
         private void InitTween()
@@ -836,6 +849,7 @@ namespace GameLogic.Common
 
         public Tween DOPlay()
         {
+            if (m_Tween != null && m_Tween.IsPlaying()) return m_Tween;
             m_Tween = CreateTween();
             return m_Tween?.Play();
         }

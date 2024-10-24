@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameConfig.l10n;
 using GameLogic.DebugModule;
 using TEngine;
 using UnityEngine;
@@ -16,7 +17,7 @@ namespace GameLogic
         {
             var item = ConfigSystem.Instance.Tables.TbItem.Get(10000);
             Log.Debug(item.Id + item.Name + item.Desc);
-            //Debug.Log(ConfigSystem.Instance.Tables.TbtextInfo.Get("Hair").En);
+            Log.Debug(Localization.GetString("a"));
 
             GameModule.UI.ShowUI<VersionGO>();
             windows = new MyDebuggerWindows();
