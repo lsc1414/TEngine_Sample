@@ -149,12 +149,12 @@ namespace TEngine
                         GUILayout.Label("Scale:", GUILayout.Width(60f));
                         if (GUILayout.RepeatButton("-", GUILayout.Width(30f)))
                         {
-                            scale -= 0.01f;
+                            scale -= 0.02f;
                         }
                         scale = GUILayout.HorizontalSlider(scale, 0.5f, 4f);
                         if (GUILayout.RepeatButton("+", GUILayout.Width(30f)))
                         {
-                            scale += 0.01f;
+                            scale += 0.02f;
                         }
                         scale = Mathf.Clamp(scale, 0.5f, 4f);
                         if (Math.Abs(scale - _mDebuggerModule.WindowScale) > 0.01f)

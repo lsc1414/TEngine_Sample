@@ -38,8 +38,8 @@ namespace TEngine
                         GUILayout.BeginHorizontal();
                         {
                             GUILayout.Label("<b>Type</b>");
-                            GUILayout.Label("<b>Count</b>", GUILayout.Width(120f));
-                            GUILayout.Label("<b>Size</b>", GUILayout.Width(120f));
+                            GUILayout.Label("<b>Count</b>", GUILayout.Width(60f));
+                            GUILayout.Label("<b>Size</b>", GUILayout.Width(60f));
                         }
                         GUILayout.EndHorizontal();
 
@@ -48,8 +48,8 @@ namespace TEngine
                             GUILayout.BeginHorizontal();
                             {
                                 GUILayout.Label(m_Records[i].Name);
-                                GUILayout.Label(m_Records[i].Count.ToString(), GUILayout.Width(120f));
-                                GUILayout.Label(GetByteLengthString(m_Records[i].Size), GUILayout.Width(120f));
+                                GUILayout.Label(m_Records[i].Count.ToString(), GUILayout.Width(60f));
+                                GUILayout.Label(GetByteLengthString(m_Records[i].Size), GUILayout.Width(60f));
                             }
                             GUILayout.EndHorizontal();
                         }
