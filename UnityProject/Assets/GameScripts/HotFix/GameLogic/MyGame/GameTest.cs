@@ -11,6 +11,7 @@ namespace GameLogic
     public class GameTest : MonoBehaviour
     {
         private MyDebuggerWindows windows;
+        public WeightedList<int> weightedList;
 
         // Start is called before the first frame update
         void Start()
