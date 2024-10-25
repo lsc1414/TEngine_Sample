@@ -61,14 +61,5 @@ namespace GameLogic.DebugModule
             }
             GUILayout.EndHorizontal();
         }
-
-        // private static TextEditor s_TextEditor = null;
-        // private static void CopyToClipboard(string content)
-        // {
-        //     s_TextEditor.text = content;
-        //     s_TextEditor.OnFocus();
-        //     s_TextEditor.Copy();
-        //     s_TextEditor.text = string.Empty;
-        // }
     }
 }

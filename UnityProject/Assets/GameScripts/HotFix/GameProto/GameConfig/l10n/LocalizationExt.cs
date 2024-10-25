@@ -8,7 +8,7 @@
             var loc = ConfigSystem.Instance.Tables.TbLocalization.GetOrDefault(key);
             if (loc == null)
             {
-                TEngine.Log.Warning("没有找到key：{0}", key);
+                TEngine.Log.Warning("没有找到文本key：{0}", key);
                 return key;
             }
             else

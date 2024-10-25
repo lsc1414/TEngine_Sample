@@ -291,7 +291,7 @@ MonoBehaviour:
     UseFromValue: 0
     FromValue: {x: 0, y: 0, z: 0, w: 0}
     SpeedBased: 0
-    DurationOrSpeed: 5
+    DurationOrSpeed: 1
     Delay: 0
     UpdateType: 0
     CustomEase: 0
@@ -302,8 +302,8 @@ MonoBehaviour:
       m_PostInfinity: 0
       m_RotationOrder: 0
     Ease: 1
-    Loops: -1
-    LoopType: 1
+    Loops: 0
+    LoopType: 0
     Snapping: 0
     OnPlay:
       m_PersistentCalls:
@@ -323,7 +323,7 @@ MonoBehaviour:
     UseFromValue: 0
     FromValue: {x: 0, y: 0, z: 0, w: 0}
     SpeedBased: 0
-    DurationOrSpeed: 5
+    DurationOrSpeed: 1
     Delay: 0
     UpdateType: 0
     CustomEase: 0
@@ -334,8 +334,8 @@ MonoBehaviour:
       m_PostInfinity: 0
       m_RotationOrder: 0
     Ease: 1
-    Loops: -1
-    LoopType: 1
+    Loops: 0
+    LoopType: 0
     Snapping: 0
     OnPlay:
       m_PersistentCalls:
@@ -355,7 +355,7 @@ MonoBehaviour:
     UseFromValue: 0
     FromValue: {x: 0, y: 0, z: 0, w: 0}
     SpeedBased: 0
-    DurationOrSpeed: 5
+    DurationOrSpeed: 1
     Delay: 0
     UpdateType: 0
     CustomEase: 0
@@ -366,8 +366,8 @@ MonoBehaviour:
       m_PostInfinity: 0
       m_RotationOrder: 0
     Ease: 1
-    Loops: -1
-    LoopType: 1
+    Loops: 0
+    LoopType: 0
     Snapping: 0
     OnPlay:
       m_PersistentCalls:
@@ -387,7 +387,7 @@ MonoBehaviour:
     UseFromValue: 0
     FromValue: {x: 0, y: 0, z: 0, w: 0}
     SpeedBased: 0
-    DurationOrSpeed: 5
+    DurationOrSpeed: 1
     Delay: 0
     UpdateType: 0
     CustomEase: 0
@@ -398,7 +398,7 @@ MonoBehaviour:
       m_PostInfinity: 0
       m_RotationOrder: 0
     Ease: 1
-    Loops: -1
+    Loops: 0
     LoopType: 1
     Snapping: 0
     OnPlay:
@@ -410,11 +410,12 @@ MonoBehaviour:
     OnComplete:
       m_PersistentCalls:
         m_Calls: []
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
+  m_PlayOnEnable: 1
   m_Delay: 0
-  m_Ease: 6
-  m_Loops: 1
-  m_LoopType: 0
+  m_Ease: 1
+  m_Loops: 0
+  m_LoopType: 1
   m_UpdateType: 0
   m_IgnoreTimeScale: 0
   m_OnPlay:

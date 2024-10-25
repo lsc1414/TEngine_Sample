@@ -26,7 +26,10 @@ namespace GameLogic
 
         private void OnDestroy()
         {
-            if (GameApp.IsValid) GameModule.Debugger.UnregisterDebuggerWindow("测试界面/测试按钮");
+            if (GameApp.IsValid)
+            {
+                GameModule.Debugger.UnregisterDebuggerWindow("测试界面/测试按钮");
+            }
         }
 
         // Update is called once per frame
