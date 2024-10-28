@@ -10,16 +10,16 @@ public class DisStripCode : MonoBehaviour
     {
         //UnityEngine.Physics
         RegisterType<Collider>();
-        RegisterType<Collider2D>();
+        //RegisterType<Collider2D>();
         RegisterType<Collision>();
-        RegisterType<Collision2D>();
-        RegisterType<CapsuleCollider2D>();
+        //RegisterType<Collision2D>();
+        //RegisterType<CapsuleCollider2D>();
 
         RegisterType<Rigidbody>();
-        RegisterType<Rigidbody2D>();
+        //RegisterType<Rigidbody2D>();
         
         RegisterType<Ray>();
-        RegisterType<Ray2D>();
+        //RegisterType<Ray2D>();
 
         //UnityEngine.Graphics
         RegisterType<Mesh>();

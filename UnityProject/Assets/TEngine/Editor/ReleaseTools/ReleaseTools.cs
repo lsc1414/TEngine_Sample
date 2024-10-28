@@ -196,7 +196,7 @@ namespace TEngine.Editor
             return DateTime.Now.ToString("yyyy-MM-dd") + "-" + totalMinutes;
         }
 
-        [MenuItem("TEngine/Quick Build/一键打包Android", false, 90)]
+        [MenuItem("TEngine/Quick Build/一键导出Android", false, 90)]
         public static void AutomationBuildAndroid()
         {
             BuildTarget target = EditorUserBuildSettings.activeBuildTarget;
@@ -204,7 +204,8 @@ namespace TEngine.Editor
             AssetDatabase.Refresh();
             BuildInternal(target, outputRoot: Application.dataPath + "/../Bundles", packageVersion: GetBuildPackageVersion());
             AssetDatabase.Refresh();
-            BuildImp(BuildTargetGroup.Android, BuildTarget.Android, $"{Application.dataPath}/../Build/Android/{GetBuildPackageVersion()}Android.apk");
+            EditorUserBuildSettings.exportAsGoogleAndroidProject = true;
+            BuildImp(BuildTargetGroup.Android, BuildTarget.Android, $"{Application.dataPath}/../Build/Android/Android_{Application.productName}");
             // BuildImp(BuildTargetGroup.Android, BuildTarget.Android, $"{Application.dataPath}/../Build/Android/Android.apk");
         }
 
@@ -243,6 +244,7 @@ namespace TEngine.Editor
                 target = buildTarget,
                 options = BuildOptions.None
             };
+           
             var report = BuildPipeline.BuildPlayer(buildPlayerOptions);
             BuildSummary summary = report.summary;
             if (summary.result == BuildResult.Succeeded)
@@ -254,5 +256,7 @@ namespace TEngine.Editor
                 Debug.Log($"Build Failed" + summary.result);
             }
         }
+
+        
     }
 }

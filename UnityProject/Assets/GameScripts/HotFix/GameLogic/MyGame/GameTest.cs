@@ -22,6 +22,7 @@ namespace GameLogic
 
             GameModule.UI.ShowUI<VersionGO>();
             windows = new MyDebuggerWindows();
+            //Log.Debug(GameModule.PlatformNative.Manager.Login());
             GameModule.Debugger.RegisterDebuggerWindow("测试界面/测试按钮", windows);
         }
 

@@ -116,6 +116,11 @@ namespace TEngine
         public static ResourceExtComponent ResourceExt => _resourceExt ??= Get<ResourceExtComponent>();
         
         private static ResourceExtComponent _resourceExt;
+        
+        
+        private static PlatformNativeModule _platformNative;
+        public static PlatformNativeModule PlatformNative => _platformNative ??= Get<PlatformNativeModule>();
+        
         #endregion
 
         /// <summary>
@@ -172,6 +177,7 @@ namespace TEngine
             _scene = null;
             _timer = null;
             _resourceExt = null;
+            _platformNative = null;
         }
 
         #region HandlePlayModeStateChanged

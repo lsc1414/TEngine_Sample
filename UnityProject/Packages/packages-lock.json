@@ -44,21 +44,21 @@
         "com.unity.mathematics": "1.2.1",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
       "version": "3.0.31",
@@ -67,7 +67,7 @@
       "dependencies": {
         "com.unity.ext.nunit": "1.0.6"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
       "version": "2.0.22",
@@ -76,14 +76,14 @@
       "dependencies": {
         "com.unity.test-framework": "1.1.9"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.memoryprofiler": {
       "version": "0.7.1-preview.1",
@@ -92,14 +92,14 @@
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
       "version": "12.1.15",
@@ -127,14 +127,14 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.searcher": {
       "version": "4.9.1",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
       "version": "12.1.15",
@@ -150,7 +150,7 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.sysroot.linux-x86_64": {
       "version": "2.0.6",
@@ -159,7 +159,7 @@
       "dependencies": {
         "com.unity.sysroot": "2.0.7"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
       "version": "1.1.33",
@@ -170,7 +170,7 @@
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
       "version": "3.0.9",
@@ -179,7 +179,7 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.toolchain.win-x86_64-linux-x86_64": {
       "version": "2.0.6",
@@ -189,7 +189,7 @@
         "com.unity.sysroot": "2.0.7",
         "com.unity.sysroot.linux-x86_64": "2.0.6"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.unity.com"
     },
     "com.unity.ugui": {
       "version": "1.0.0",

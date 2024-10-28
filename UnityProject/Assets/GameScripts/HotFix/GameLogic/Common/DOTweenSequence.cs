@@ -1,17 +1,18 @@
-using DG.Tweening;
-using System;
-using UnityEngine;
-using static GameLogic.Common.DOTweenSequence;
-using UnityEngine.Events;
-using UnityEngine.UI;
-
-#if UNITY_EDITOR
-using DG.DOTweenEditor;
-using UnityEditorInternal;
-using UnityEditor;
-
 namespace GameLogic.Common
 {
+    using DG.Tweening;
+    using System;
+    using UnityEngine;
+    using static GameLogic.Common.DOTweenSequence;
+    using UnityEngine.Events;
+    using UnityEngine.UI;
+
+#if UNITY_EDITOR
+    using DG.DOTweenEditor;
+    using UnityEditorInternal;
+    using UnityEditor;
+
+
     #region Editor Inspector
 
     [CanEditMultipleObjects]
